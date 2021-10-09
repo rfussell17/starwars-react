@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './characters.css';
 import axios from 'axios';
 
 class Characters extends Component {
@@ -7,9 +6,7 @@ class Characters extends Component {
         super();
         this.state = {
         characters: [
-            "12",
-            "Luke",
-            "Skywalker"
+            {id: 1, firstName: "Luke", lastName: "skywalker"}
         ]
         }      
 
