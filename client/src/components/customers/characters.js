@@ -15,8 +15,8 @@ class Characters extends Component {
 componentDidMount(){
         axios.get('https://swapi.dev/api/people/')
         .then((res) => {
-            const person = res.data;
-            this.setState({ person })
+            const character = res.data;
+            this.setState({ character })
             console.log(res.data);  
         })
     };
@@ -27,14 +27,20 @@ componentDidMount(){
 
   render() {
 
-
     return (
         <div>
             <h2>Characters</h2>
-            <ul>
-                {this.state.characters.map(character => 
-                   <li key={character.id}> {character.firstName} {character.lastName}</li> )}
-            </ul>
+    
+            <tr key={character.id}>
+        <td id="1">{character.name}</td>
+        <td id="2">{character.birthdate}</td>
+        <td id="3">{character.height}</td>
+        <td id="3">{character.mass}</td>
+        <td>
+        </td>
+      </tr>
+
+        
         </div>      
         );
     }
